@@ -6,9 +6,15 @@ This environment use Nginx for the webserver in its own Docker container, there 
 The system is also using Unison for Magento folder sync to avoid performance issue on OSX
 
 # Prerequisites
-Have [Unison](http://www.cis.upenn.edu/~bcpierce/unison/) installed on your env ```brew install unison```
+Have [Unison](http://www.cis.upenn.edu/~bcpierce/unison/) installed on your env 
+```shell
+brew install unison
+```
 ## optional
-Have [FSwatch](https://github.com/emcrisostomo/fswatch) installed also to monitor file changes
+Have [FSwatch](https://github.com/emcrisostomo/fswatch) installed also to monitor file changes 
+```shell
+brew install fswatch
+```
 
 # Install
 1. Download Magento CE from [Magento Tech](https://magento.com/tech-resources/download)
