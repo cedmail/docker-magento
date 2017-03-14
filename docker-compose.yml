@@ -1,0 +1,29 @@
+version: '2'
+services:  
+  php:
+    build: ./php    
+    volumes_from:
+     - unison
+  nginx:
+    image: nginx:latest
+    ports:
+     - "8880:80"
+    volumes:
+     - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    volumes_from:
+     - unison
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_DATABASE: 'magento'
+      MYSQL_USER: 'magento'
+      MYSQL_PASSWORD: 'magento'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  unison:  
+    image: leighmcculloch/unison:latest  
+    environment:  
+      - UNISON_WORKING_DIR=/unison  
+    volumes:
+      - /unison
+    ports:  
+      - "5000:5000"  
