@@ -17,7 +17,7 @@ brew install fswatch
 ```
 
 # Install
-1. Download Magento CE from [Magento Tech](https://magento.com/tech-resources/download)
+1. Download Magento CE from [Magento Tech](https://magento.com/tech-resources/download) there is two options with or without sample data
 2. Unzip downloaded file in ~/magento
 3. Run docker-compose to launch all containers 
 ```shell
